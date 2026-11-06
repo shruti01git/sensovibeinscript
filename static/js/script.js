@@ -64,6 +64,9 @@
             });
         }, { threshold: 0.12 });
         revealItems.forEach((item) => revealObserver.observe(item));
+        window.setTimeout(() => {
+            revealItems.forEach((item) => item.classList.add('is-visible'));
+        }, 1200);
     } else {
         revealItems.forEach((item) => item.classList.add('is-visible'));
     }
